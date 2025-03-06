@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Type name="input_type">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="ConnectRequest">
+							<pragmas>
+								<ed:Value oid="!ed/4bf2/5567/8F74/66f102485cbe"/>
+							</pragmas>
+						</Value>
+						<Value name="ConnectAck">
+							<pragmas>
+								<ed:Value oid="!ed/4bf3/5567/8F74/66f102891a2b"/>
+							</pragmas>
+						</Value>
+						<Value name="DisconnectRequest">
+							<pragmas>
+								<ed:Value oid="!ed/4bf4/5567/8F74/66f1028c44a6"/>
+							</pragmas>
+						</Value>
+						<Value name="DisconnectAck">
+							<pragmas>
+								<ed:Value oid="!ed/4bf5/5567/8F74/66f1028d31e2"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/4bf1/5567/8F74/66f1024054ab"/>
+			</pragmas>
+		</Type>
+		<Type name="MOVE">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="Stop">
+							<pragmas>
+								<ed:Value oid="!ed/49e4/4C74/4BE4/66ef11d55ade"/>
+							</pragmas>
+						</Value>
+						<Value name="Forward">
+							<pragmas>
+								<ed:Value oid="!ed/49e5/4C74/4BE4/66ef11fc2dd9"/>
+							</pragmas>
+						</Value>
+						<Value name="Reverse">
+							<pragmas>
+								<ed:Value oid="!ed/49e8/4C74/4BE4/66ef12182cfd"/>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/49e3/4C74/4BE4/66ef11c66bb1"/>
+			</pragmas>
+		</Type>
+		<Type name="strucType">
+			<definition>
+				<Struct>
+					<fields>
+						<Field name="fby_data">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="uint8"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Field oid="!ed/49d9/4C74/4BE4/66ef0e34a13"/>
+							</pragmas>
+						</Field>
+						<Field name="move">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="MOVE"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Field oid="!ed/49da/4C74/4BE4/66ef0e3f1363"/>
+							</pragmas>
+						</Field>
+					</fields>
+				</Struct>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/49c8/4C74/4BE4/66ef0db95972"/>
+			</pragmas>
+		</Type>
+		<Constant name="MAX_SIZE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="uint8"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="5"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/49d7/15CE/692C/66ee574b39ad"/>
+			</pragmas>
+		</Constant>
+	</declarations>
+</File>

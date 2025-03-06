@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Operator kind="node" name="ComputeSum1">
+			<inputs>
+				<Variable name="cond1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4b3e/5567/8F74/66f0fd39267a"/>
+					</pragmas>
+				</Variable>
+				<Variable name="cond2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4b70/5567/8F74/66f0fd8f3de6"/>
+					</pragmas>
+				</Variable>
+				<Variable name="cond3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4b76/5567/8F74/66f0fd90364e"/>
+					</pragmas>
+				</Variable>
+				<Variable name="cond4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4bd1/5567/8F74/66f0fe3e10eb"/>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<data>
+				<StateMachine name="SM">
+					<states>
+						<State initial="true" name="init">
+							<unless>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="stateA"/>
+									</target>
+									<condition>
+										<!-- cond1 = true -->
+										<BinaryOp name="1" operator="=">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="cond1"/>
+													</path>
+												</IdExpression>
+												<ConstValue value="true"/>
+											</operands>
+										</BinaryOp>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/4b0c/5567/8F74/66f0fd393860"/>
+									</pragmas>
+								</Transition>
+							</unless>
+							<pragmas>
+								<ed:State oid="!ed/4b0b/5567/8F74/66f0fd393084"/>
+							</pragmas>
+						</State>
+						<State name="stateB">
+							<unless>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="stateA"/>
+									</target>
+									<condition>
+										<!-- cond3 = true -->
+										<BinaryOp name="3" operator="=">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="cond3"/>
+													</path>
+												</IdExpression>
+												<ConstValue value="true"/>
+											</operands>
+										</BinaryOp>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/4b0e/5567/8F74/66f0fd39147c"/>
+									</pragmas>
+								</Transition>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="init"/>
+									</target>
+									<condition>
+										<!-- cond4 = true -->
+										<BinaryOp name="4" operator="=">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="cond4"/>
+													</path>
+												</IdExpression>
+												<ConstValue value="true"/>
+											</operands>
+										</BinaryOp>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/4bbf/5567/8F74/66f0fe105422"/>
+									</pragmas>
+								</Transition>
+							</unless>
+							<pragmas>
+								<ed:State oid="!ed/4b0d/5567/8F74/66f0fd395ca5"/>
+							</pragmas>
+						</State>
+						<State name="stateA">
+							<unless>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="stateB"/>
+									</target>
+									<condition>
+										<!-- cond2 = true -->
+										<BinaryOp name="2" operator="=">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="cond2"/>
+													</path>
+												</IdExpression>
+												<ConstValue value="true"/>
+											</operands>
+										</BinaryOp>
+									</condition>
+									<pragmas>
+										<ed:Transition oid="!ed/4b10/5567/8F74/66f0fd39dd0"/>
+									</pragmas>
+								</Transition>
+							</unless>
+							<pragmas>
+								<ed:State oid="!ed/4b0f/5567/8F74/66f0fd393672"/>
+							</pragmas>
+						</State>
+					</states>
+					<pragmas>
+						<ed:StateMachine oid="!ed/4b0a/5567/8F74/66f0fd393aae"/>
+					</pragmas>
+				</StateMachine>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/4b09/5567/8F74/66f0fd39747a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<NetDiagram name="ComputeSum1" landscape="true" format="A4 (210 297)" oid="!ed/4b35/5567/8F74/66f0fd3917c1">
+							<presentationElements>
+								<StateMachineGE presentable="!ed/4b0a/5567/8F74/66f0fd393aae">
+									<position>
+										<Point x="2831" y="7911"/>
+									</position>
+									<size>
+										<Size width="9684" height="6773"/>
+									</size>
+								</StateMachineGE>
+								<StateGE presentable="!ed/4b0b/5567/8F74/66f0fd393084">
+									<position>
+										<Point x="6588" y="8678"/>
+									</position>
+									<size>
+										<Size width="2116" height="1456"/>
+									</size>
+								</StateGE>
+								<StateGE presentable="!ed/4b0d/5567/8F74/66f0fd395ca5">
+									<position>
+										<Point x="3545" y="12515"/>
+									</position>
+									<size>
+										<Size width="2117" height="1455"/>
+									</size>
+								</StateGE>
+								<StateGE presentable="!ed/4b0f/5567/8F74/66f0fd393672">
+									<position>
+										<Point x="9895" y="12462"/>
+									</position>
+									<size>
+										<Size width="2117" height="1455"/>
+									</size>
+								</StateGE>
+								<TransitionGE presentable="!ed/4b0c/5567/8F74/66f0fd393860">
+									<positions>
+										<Point x="8704" y="9499"/>
+										<Point x="10054" y="9419"/>
+										<Point x="11165" y="11086"/>
+										<Point x="11245" y="12462"/>
+									</positions>
+									<labelSize>
+										<Size width="2196" height="318"/>
+									</labelSize>
+									<labelPos>
+										<Point x="9921" y="9128"/>
+									</labelPos>
+									<slashPos>
+										<Point x="11324" y="9128"/>
+									</slashPos>
+								</TransitionGE>
+								<TransitionGE presentable="!ed/4b0e/5567/8F74/66f0fd39147c">
+									<positions>
+										<Point x="5715" y="12779"/>
+										<Point x="6509" y="12171"/>
+										<Point x="9128" y="12250"/>
+										<Point x="9922" y="12753"/>
+									</positions>
+									<labelSize>
+										<Size width="2487" height="318"/>
+									</labelSize>
+									<labelPos>
+										<Point x="6588" y="11668"/>
+									</labelPos>
+									<slashPos>
+										<Point x="8281" y="11668"/>
+									</slashPos>
+								</TransitionGE>
+								<TransitionGE presentable="!ed/4b10/5567/8F74/66f0fd39dd0">
+									<positions>
+										<Point x="9895" y="13441"/>
+										<Point x="9313" y="14155"/>
+										<Point x="6509" y="13917"/>
+										<Point x="5715" y="13335"/>
+									</positions>
+									<labelSize>
+										<Size width="3149" height="318"/>
+									</labelSize>
+									<labelPos>
+										<Point x="6403" y="13996"/>
+									</labelPos>
+									<slashPos>
+										<Point x="8758" y="13996"/>
+									</slashPos>
+								</TransitionGE>
+								<TransitionGE presentable="!ed/4bbf/5567/8F74/66f0fe105422">
+									<positions>
+										<Point x="4128" y="12515"/>
+										<Point x="4048" y="11853"/>
+										<Point x="5186" y="9499"/>
+										<Point x="6588" y="9419"/>
+									</positions>
+									<labelSize>
+										<Size width="2275" height="2858"/>
+									</labelSize>
+									<labelPos>
+										<Point x="3148" y="9234"/>
+									</labelPos>
+									<slashPos>
+										<Point x="4630" y="9234"/>
+									</slashPos>
+								</TransitionGE>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>
